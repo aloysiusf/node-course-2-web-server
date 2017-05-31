@@ -1,4 +1,5 @@
 
+//https://aqueous-anchorage-14758.herokuapp.com/ | https://git.heroku.com/aqueous-anchorage-14758.git
 const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
@@ -60,6 +61,12 @@ app.get('/about', (req, res) =>{
 	});
 });
 
+
+app.get('/projects', (req, res) =>{
+	res.render('projects.hbs', {
+		pageTitle: 'Projects'
+	});
+});
 
 app.get('/bad', (req, res) =>{
 	res.send({
